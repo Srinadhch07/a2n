@@ -1,0 +1,74 @@
+/* Vision & Mission */
+.vision-mission {
+    text-align: center;
+    padding: 60px 20px;
+}
+.vision-mission h2 {
+    font-size: 2rem;
+    color: var(--mint);
+    margin-bottom: 10px;
+}
+.vision-mission p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #ccc;
+}
+
+/* Who We Are */
+.who-we-are .who-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+.who-we-are img {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 12px;
+}
+.who-text {
+    flex: 1;
+}
+.who-text h2 {
+    font-size: 2rem;
+    color: var(--mint);
+    margin-bottom: 15px;
+}
+.who-text p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Why Choose A2N */
+.why-choose {
+    background: var(--teal);
+    color: #fff;
+    padding: 60px 20px;
+}
+.why-choose h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+.why-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.why-card {
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition);
+}
+.why-card:hover {
+    background: rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+}
+.why-card i {
+    font-size: 40px;
+    color: var(--mint);
+    margin-bottom: 15px;
+}

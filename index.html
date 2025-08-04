@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2Z - Learn. Compete. Earn Scholarships.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e90ff">
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(() => console.log('Service Worker registered'))
+                .catch((err) => console.log('Service Worker registration failed:', err));
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        Upcoming Exam: 15th August | Registration Deadline: 10th August
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo2.png" alt="A2Z Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="login.html" class="login-btn">Login</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Learn. Compete. Earn Scholarships. Build Your Future.</h1>
+            <div class="hero-buttons">
+                <button id="registerBtn">Register for Exams</button>
+                <button id="scholarshipBtn">Know About Scholarships</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Install Button -->
+    <button id="installBtn" class="install-btn">Install App</button>
+
+    <!-- Highlights -->
+    <section class="highlights container">
+        <div class="highlight">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Affordable Learning</h3>
+            <p>Quality education at a price everyone can afford.</p>
+        </div>
+        <div class="highlight">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Scholarship Program</h3>
+            <p>Earn rewards and scholarships for your efforts.</p>
+        </div>
+        <div class="highlight">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <h3>Easy Registration</h3>
+            <p>Quick and simple registration process for all exams.</p>
+        </div>
+    </section>
+
+    <!-- Mint Box - Upcoming Dates -->
+    <section class="mint-box container">
+        <h2>Upcoming Dates</h2>
+        <div class="dates">
+            <p><strong>Exam 1:</strong> 15th August 2025</p>
+            <p><strong>Registration Deadline:</strong> 10th August 2025</p>
+            <p><strong>Result Announcement:</strong> 25th August 2025</p>
+        </div>
+    </section>
+
+    <!-- Testimonial Carousel -->
+    <section class="testimonial-section container">
+        <h2>Success Stories</h2>
+        <div class="testimonial-carousel" id="testimonialCarousel">
+            <div class="testimonial">
+                <p>"A2Z helped me achieve my dream scholarship. Highly recommended!"</p>
+                <h4>- Priya S.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The exams were well-structured and the process was smooth."</p>
+                <h4>- Ramesh K.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Affordable and effective learning platform for students."</p>
+                <h4>- Anjali M.</h4>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/home.js"></script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>A2Z</h3>
+                <p>Learn. Compete. Earn Scholarships. Build Your Future.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="scholarship.html">Scholarship</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: a2nedupreneurs@gmail.com</p>
+                <p>Phone: +91 9876543210</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 A2Z. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/navbar.js"></script>
+
+    <!-- Install Button Script -->
+    <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        installBtn.style.display = 'block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log(`User response: ${outcome}`);
+            deferredPrompt = null;
+            installBtn.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('appinstalled', () => {
+        installBtn.style.display = 'none';
+        console.log('PWA installed');
+    });
+    </script>
+</body>
+</html>

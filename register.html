@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - A2N</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h2>Create Your A2N Account</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="number" placeholder="Age" required>
+        <select required>
+          <option value="">Select Education Level</option>
+          <option value="School">School</option>
+          <option value="College">College</option>
+          <option value="Graduate">Graduate</option>
+        </select>
+        <select required>
+          <option value="">Choose Course</option>
+          <option value="Govt Jobs">Govt Jobs</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Teacher Training">Teacher Training</option>
+          <option value="Programming">Programming</option>
+        </select>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+      <div id="registerMessage" class="auth-message"></div>
+    </div>
+  </div>
+  <script src="js/register.js"></script>
+</body>
+</html>

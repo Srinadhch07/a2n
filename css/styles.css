@@ -1,0 +1,210 @@
+/* ---------- Global Theme ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #F6F6F6;
+    line-height: 1.6;
+}
+h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+.container { 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: auto; 
+    padding: 40px 0; 
+}
+:root {
+    --teal: #00897B;
+    --mint: #A2D5C6;
+    --dark: #1C1C1C;
+    --light: #F6F6F6;
+    --transition: 0.3s ease-in-out;
+}
+button {
+    background: var(--teal);
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+button:hover { 
+    background: #00bfa5; 
+    transform: translateY(-2px); 
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--dark);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.nav-links a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+.nav-links a:hover {
+    color: var(--mint);
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: var(--dark);
+        flex-direction: column;
+        width: 220px;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+        animation: slideIn 0.3s ease;
+    }
+    .nav-links li {
+        margin: 15px 0;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ---------- Announcement Bar ---------- */
+.announcement {
+    background: var(--mint);
+    color: #000;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background: var(--dark);
+    color: #fff;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-section h3 {
+    font-size: 1.8rem;
+    color: var(--mint);
+}
+.footer-section h4 {
+    margin-bottom: 15px;
+    color: var(--mint);
+}
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+    color: var(--mint);
+}
+.social-icons a {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: var(--mint);
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.install-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* 👈 Bottom-left */
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: pulse 1.5s infinite;
+    z-index: 9999;
+    display: none; /* Initially hidden */
+    transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(30,144,255,0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(30,144,255,0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(30,144,255,0); }
+}
+
+.install-btn:hover {
+    background: #0c75d8;
+    transform: scale(1.05);
+}

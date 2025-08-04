@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2Z Admission</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admission.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announcement">Admissions Open – Join Now for Classes & Study Materials!</div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="A2Z Logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="scholarship.html">Scholarship</a></li>
+      <li><a href="admission.html" class="active">Admission</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="login-btn">Login</a>
+    </div>
+    <div class="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="admission-hero">
+    <h1>Join A2Z – Learn & Grow</h1>
+    <p>For just ₹499, gain access to premium study materials and interactive live classes.</p>
+    <a href="#register" class="hero-btn">Register Now</a>
+  </section>
+
+  <!-- Admission Card -->
+  <section class="admission-package container">
+    <div class="card">
+      <h2>Admission Fee: ₹499</h2>
+      <ul>
+        <li><i class="fas fa-book"></i> Study Materials</li>
+        <li><i class="fas fa-chalkboard-teacher"></i> Live & Recorded Classes</li>
+        <li><i class="fas fa-user-graduate"></i> Expert Mentor Support</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison container">
+    <h2>Compare Our Programs</h2>
+    <div class="comparison-wrapper">
+      <div class="plan">
+        <h3>Admission Only</h3>
+        <p>₹499</p>
+        <ul>
+          <li>✔ Study Materials</li>
+          <li>✔ Live Classes</li>
+          <li>✖ Scholarship Exams</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Scholarship Only</h3>
+        <p>₹1,000</p>
+        <ul>
+          <li>✖ Study Materials</li>
+          <li>✖ Live Classes</li>
+          <li>✔ 5 Scholarship Exams</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Both</h3>
+        <p>₹1,499</p>
+        <ul>
+          <li>✔ Study Materials</li>
+          <li>✔ Live Classes</li>
+          <li>✔ 5 Scholarship Exams</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose container">
+    <h2>Why Choose A2Z?</h2>
+    <div class="features">
+      <div class="feature"><i class="fas fa-book-reader"></i><p>Quality Learning</p></div>
+      <div class="feature"><i class="fas fa-chalkboard-teacher"></i><p>Expert Instructors</p></div>
+      <div class="feature"><i class="fas fa-clock"></i><p>Flexible Learning</p></div>
+      <div class="feature"><i class="fas fa-headset"></i><p>Student Support</p></div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="registration container" id="register">
+    <h2>Register Now</h2>
+    <div class="form-card">
+      <form id="admissionForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="number" placeholder="Age" required>
+        <select required>
+          <option value="">Select Education Level</option>
+          <option value="School">School</option>
+          <option value="College">College</option>
+          <option value="Graduate">Graduate</option>
+        </select>
+        <input type="tel" placeholder="Contact Number" required>
+        <button type="submit">Register</button>
+      </form>
+      <div id="confirmationMessage" class="confirmation-message"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>A2Z</h3>
+        <p>Empowering students with opportunities to learn and grow.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="scholarship.html">Scholarship</a></li>
+          <li><a href="admission.html">Admission</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: info@A2Z.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 A2Z. All rights reserved.</div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/admission.js"></script>
+</body>
+</html>

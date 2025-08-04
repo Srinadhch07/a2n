@@ -1,0 +1,111 @@
+/* Hero */
+.admission-hero {
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+.admission-hero h1 {
+    font-size: 2.2rem;
+    color: var(--mint);
+    margin-bottom: 15px;
+}
+.admission-hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+.hero-btn {
+    background: var(--teal);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+.hero-btn:hover { background: #00bfa5; }
+
+/* Admission Card */
+.admission-package .card {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 30px auto;
+    max-width: 400px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+.admission-package h2 { color: var(--mint); margin-bottom: 20px; }
+.admission-package ul { list-style: none; padding: 0; }
+.admission-package li { margin: 10px 0; color: #fff; font-size: 1.1rem; }
+.admission-package li i { color: var(--teal); margin-right: 8px; }
+
+/* Comparison (Cards on Mobile) */
+.comparison h2 { text-align: center; color: var(--mint); margin-bottom: 25px; }
+.comparison-wrapper {
+    display: grid;
+    gap: 20px;
+}
+.plan {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.plan h3 { color: var(--mint); margin-bottom: 10px; }
+.plan p { font-size: 1.4rem; color: var(--teal); margin-bottom: 15px; }
+.plan ul { list-style: none; color: #fff; padding: 0; }
+.plan li { margin: 8px 0; }
+
+/* Desktop Table (only for large screens) */
+@media(min-width: 768px) {
+    .comparison-wrapper { 
+        display: grid; 
+        grid-template-columns: repeat(3,1fr); 
+        gap: 20px; 
+    }
+}
+
+/* Why Choose */
+.why-choose { text-align: center; margin: 50px 0; }
+.why-choose h2 { color: var(--mint); margin-bottom: 25px; }
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 20px;
+}
+.feature {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+}
+.feature i { font-size: 2rem; color: var(--teal); margin-bottom: 10px; }
+
+/* Form */
+.registration h2 { text-align: center; color: var(--mint); margin-bottom: 20px; }
+.form-card {
+    background: var(--mint);
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+}
+.form-card input, .form-card select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    background: var(--teal);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+}
+.confirmation-message { margin-top: 15px; text-align: center; color: #000; font-weight: bold; }
